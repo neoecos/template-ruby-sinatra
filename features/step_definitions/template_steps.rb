@@ -25,3 +25,4 @@ end
 Then(/^I should see the image "(.*?)"$/) do |image_name|
   last_response.should have_xpath("//img[@src=\"#{image_name}\"]")
 end
+

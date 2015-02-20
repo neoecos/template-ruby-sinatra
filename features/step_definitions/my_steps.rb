@@ -22,3 +22,6 @@ Then(/^se observan los textos centrados$/) do
   last_response.should have_xpath("//center")
 end
 
+Then(/^debo ver$/) do |pista|
+  last_response.body.should =~ /#{pista}/m
+ end
