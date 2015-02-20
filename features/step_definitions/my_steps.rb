@@ -26,7 +26,6 @@ Then(/^debo ver$/) do |pista|
   last_response.body.should =~ /#{pista}/m
  end
 
-
 Given(/^pantalla de captura de letra$/) do
   visit '/captura'
 end
@@ -36,5 +35,9 @@ Given(/^ingresa una letra "(.*?)" en el campo "(.*?)"$/) do |letra, campo|
 end
 
 Then(/^Mostrar letra seleccionada "(.*?)"$/) do |letra|
+  last_response.body.should =~ /#{letra}/m
+end
+
+Then(/^dibujar la letra "(.*?)" donde corresponda$/) do |letra|
   last_response.body.should =~ /#{letra}/m
 end
