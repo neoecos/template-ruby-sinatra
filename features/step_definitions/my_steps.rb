@@ -9,3 +9,7 @@ end
 Then(/^debo ver "(.*?)"$/) do |pista|
   last_response.body.should =~ /#{pista}/m
 end
+
+Then(/^muestra los espacios en blanco de la palabra foco "(.*?)"$/) do |espacios|
+  last_response.body.should =~ /#{espacios}/m
+end
